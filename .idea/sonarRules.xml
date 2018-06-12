@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="rules">
+    <option name="sonarRulesByRuleKey">
+      <map>
+        <entry key="squid:S2068">
+          <value>
+            <Rule>
+              <option name="htmlDesc" value="&lt;p&gt;Because it is easy to extract strings from a compiled application, credentials should never be hard-coded. Do so, and they're almost guaranteed to&#10;end up in the hands of an attacker. This is particularly true for applications that are distributed.&lt;/p&gt;&#10;&lt;p&gt;Credentials should be stored outside of the code in a strongly-protected encrypted configuration file or database.&lt;/p&gt;&#10;&lt;h2&gt;Noncompliant Code Example&lt;/h2&gt;&#10;&lt;pre&gt;&#10;Connection conn = null;&#10;try {&#10;  conn = DriverManager.getConnection(&quot;jdbc:mysql://localhost/test?&quot; +&#10;        &quot;user=steve&amp;amp;password=blue&quot;); // Noncompliant&#10;  String uname = &quot;steve&quot;;&#10;  String password = &quot;blue&quot;;&#10;  conn = DriverManager.getConnection(&quot;jdbc:mysql://localhost/test?&quot; +&#10;        &quot;user=&quot; + uname + &quot;&amp;amp;password=&quot; + password); // Noncompliant&#10;&#10;  java.net.PasswordAuthentication pa = new java.net.PasswordAuthentication(&quot;userName&quot;, &quot;1234&quot;.toCharArray());  // Noncompliant&#10;&lt;/pre&gt;&#10;&lt;h2&gt;Compliant Solution&lt;/h2&gt;&#10;&lt;pre&gt;&#10;Connection conn = null;&#10;try {&#10;  String uname = getEncryptedUser();&#10;  String password = getEncryptedPass();&#10;  conn = DriverManager.getConnection(&quot;jdbc:mysql://localhost/test?&quot; +&#10;        &quot;user=&quot; + uname + &quot;&amp;amp;password=&quot; + password);&#10;&lt;/pre&gt;&#10;&lt;h2&gt;See&lt;/h2&gt;&#10;&lt;ul&gt;&#10;  &lt;li&gt; &lt;a href=&quot;http://cwe.mitre.org/data/definitions/798&quot;&gt;MITRE, CWE-798&lt;/a&gt; - Use of Hard-coded Credentials &lt;/li&gt;&#10;  &lt;li&gt; &lt;a href=&quot;http://cwe.mitre.org/data/definitions/259&quot;&gt;MITRE, CWE-259&lt;/a&gt; - Use of Hard-coded Password &lt;/li&gt;&#10;  &lt;li&gt; &lt;a href=&quot;http://www.sans.org/top25-software-errors/&quot;&gt;SANS Top 25&lt;/a&gt; - Porous Defenses &lt;/li&gt;&#10;  &lt;li&gt; &lt;a href=&quot;https://www.securecoding.cert.org/confluence/x/qQCHAQ&quot;&gt;CERT, MSC03-J.&lt;/a&gt; - Never hard code sensitive information &lt;/li&gt;&#10;  &lt;li&gt; OWASP Top 10 2017 Category A2 - Broken Authentication &lt;/li&gt;&#10;  &lt;li&gt; Derived from FindSecBugs rule &lt;a href=&quot;http://h3xstream.github.io/find-sec-bugs/bugs.htm#HARD_CODE_PASSWORD&quot;&gt;Hard Coded Password&lt;/a&gt; &lt;/li&gt;&#10;&lt;/ul&gt;" />
+              <option name="key" value="squid:S2068" />
+              <option name="lan" value="java" />
+              <option name="langName" value="Java" />
+              <option name="name" value="Credentials should not be hard-coded" />
+              <option name="severity" value="BLOCKER" />
+            </Rule>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
