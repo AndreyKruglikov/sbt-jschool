@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class Streams<T> {
 
-    private static Collection collection;
+    private Collection<? extends T> collection;
 
     private Streams(Collection<? extends T> collection) {
         this.collection = collection;
@@ -19,17 +19,17 @@ public class Streams<T> {
     }
 
     public Streams<T> filter(Predicate<? super T> predicate) {
-        collection = (Collection) collection.stream().filter(predicate).collect(Collectors.toList());
+        this.collection = collection.stream().filter(predicate).collect(Collectors.toList());
         return this;
     }
 
-    public Streams<T> transform(UnaryOperator<? extends T> transformer) {
-        collection = (Collection) collection.stream().map(transformer).collect(Collectors.toList());
+    public Streams<T> transform(Function<? super T, ? extends T> transformer) {
+        this.collection = collection.stream().map(transformer).collect(Collectors.toList());
         return this;
     }
 
     public <K, V> Map<K, V> toMap(Function<? super T, ? extends K> keyMapper,
                                   Function<? super T, ? extends V> valueMapper) {
-        return (Map<K, V>) collection.stream().collect(Collectors.toMap(keyMapper, valueMapper));
+        return collection.stream().collect(Collectors.toMap(keyMapper, valueMapper));
     }
 }
