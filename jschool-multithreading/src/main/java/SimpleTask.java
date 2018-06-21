@@ -14,7 +14,7 @@ public class SimpleTask implements Runnable {
             sum = i + sum;
         }
         try {
-            TimeUnit.SECONDS.sleep(10);
+            TimeUnit.SECONDS.sleep(5);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
