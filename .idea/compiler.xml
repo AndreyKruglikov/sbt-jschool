@@ -13,6 +13,10 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="jschool-classloaders" target="1.5" />
+      <module name="jschool-multithreading" target="7" />
+      <module name="jschool-serialization" target="7" />
+      <module name="jschool-streams" target="8" />
+      <module name="sbt-jschool" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
