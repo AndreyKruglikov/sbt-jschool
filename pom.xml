@@ -11,6 +11,8 @@
     <modules>
         <module>jschool-serialization</module>
         <module>jschool-streams</module>
+        <module>jschool-multithreading</module>
+        <module>jschool-classloaders</module>
     </modules>
 
 

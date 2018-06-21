@@ -8,6 +8,36 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/jschool-classloaders/src/main/java/Runner.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jschool-classloaders/src/main/java/impl/CalculatorImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jschool-multithreading/src/main/java/FixedThreadPool.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jschool-multithreading/src/main/java/Runner.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jschool-multithreading/src/main/java/SimpleTask.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jschool-multithreading/src/main/java/ThreadPool.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/jschool-serialization/src/main/java/Runner.java">
           <value>
             <set>
@@ -48,72 +78,7 @@
         </entry>
         <entry key="$PROJECT_DIR$/jschool-serialization/src/main/java/SerializationUtils.java">
           <value>
-            <set>
-              <SonarIssue>
-                <option name="isNew" value="false" />
-                <option name="key" value="AWP1V2JXV0Wj3VTF5m25" />
-                <option name="line" value="10" />
-                <option name="message" value="Combine this catch with the one at line 8, which has the same body." />
-                <option name="ruleKey" value="squid:S2147" />
-                <option name="severity" value="MINOR" />
-              </SonarIssue>
-              <SonarIssue>
-                <option name="isNew" value="false" />
-                <option name="key" value="AWP1V2JXV0Wj3VTF5m27" />
-                <option name="line" value="9" />
-                <option name="message" value="Use a logger to log this exception." />
-                <option name="ruleKey" value="squid:S1148" />
-                <option name="severity" value="MINOR" />
-              </SonarIssue>
-              <SonarIssue>
-                <option name="isNew" value="false" />
-                <option name="key" value="AWP1V2JYV0Wj3VTF5m29" />
-                <option name="line" value="20" />
-                <option name="message" value="Use a logger to log this exception." />
-                <option name="ruleKey" value="squid:S1148" />
-                <option name="severity" value="MINOR" />
-              </SonarIssue>
-              <SonarIssue>
-                <option name="isNew" value="false" />
-                <option name="key" value="AWP1V2JXV0Wj3VTF5m23" />
-                <option name="line" value="0" />
-                <option name="message" value="Move this file to a named package." />
-                <option name="ruleKey" value="squid:S1220" />
-                <option name="severity" value="MINOR" />
-              </SonarIssue>
-              <SonarIssue>
-                <option name="isNew" value="false" />
-                <option name="key" value="AWP1V2JYV0Wj3VTF5m2-" />
-                <option name="line" value="22" />
-                <option name="message" value="Use a logger to log this exception." />
-                <option name="ruleKey" value="squid:S1148" />
-                <option name="severity" value="MINOR" />
-              </SonarIssue>
-              <SonarIssue>
-                <option name="isNew" value="false" />
-                <option name="key" value="AWP1V2JXV0Wj3VTF5m24" />
-                <option name="line" value="3" />
-                <option name="message" value="Add a private constructor to hide the implicit public one." />
-                <option name="ruleKey" value="squid:S1118" />
-                <option name="severity" value="MAJOR" />
-              </SonarIssue>
-              <SonarIssue>
-                <option name="isNew" value="false" />
-                <option name="key" value="AWP1V2JYV0Wj3VTF5m28" />
-                <option name="line" value="11" />
-                <option name="message" value="Use a logger to log this exception." />
-                <option name="ruleKey" value="squid:S1148" />
-                <option name="severity" value="MINOR" />
-              </SonarIssue>
-              <SonarIssue>
-                <option name="isNew" value="false" />
-                <option name="key" value="AWP1V2JXV0Wj3VTF5m26" />
-                <option name="line" value="21" />
-                <option name="message" value="Combine this catch with the one at line 19, which has the same body." />
-                <option name="ruleKey" value="squid:S2147" />
-                <option name="severity" value="MINOR" />
-              </SonarIssue>
-            </set>
+            <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/jschool-serialization/src/main/java/Student.java">
