@@ -6,12 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="jschool jmm" />
         <module name="jschool-multithreading" />
         <module name="jschool-serialization" />
         <module name="jschool-streams" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="jschool jmm" target="1.7" />
       <module name="jschool-classloaders" target="1.5" />
       <module name="jschool-multithreading" target="7" />
       <module name="jschool-serialization" target="7" />

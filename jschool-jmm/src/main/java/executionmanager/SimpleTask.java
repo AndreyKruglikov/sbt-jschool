@@ -15,15 +15,17 @@ public class SimpleTask implements Runnable {
     @Override
     public void run() {
         try {
-            TimeUnit.SECONDS.sleep(2);
+            TimeUnit.MILLISECONDS.sleep(2);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            System.out.println(this + " interrupted");
+            return;
         }
         if (random.nextInt() < 0)
             try {
                 throw new Exception();
             } catch (Exception e) {
                 System.out.println(this + " terminated with exception");
+                return;
             }
         System.out.println(this + " completed");
     }

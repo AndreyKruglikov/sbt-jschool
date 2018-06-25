@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/jschool-jmm/jschool jmm.iml" filepath="$PROJECT_DIR$/jschool-jmm/jschool jmm.iml" />
       <module fileurl="file://$PROJECT_DIR$/jschool-multithreading/jschool-multithreading.iml" filepath="$PROJECT_DIR$/jschool-multithreading/jschool-multithreading.iml" />
       <module fileurl="file://$PROJECT_DIR$/jschool-serialization/jschool-serialization.iml" filepath="$PROJECT_DIR$/jschool-serialization/jschool-serialization.iml" />
       <module fileurl="file://$PROJECT_DIR$/jschool-streams/jschool-streams.iml" filepath="$PROJECT_DIR$/jschool-streams/jschool-streams.iml" />

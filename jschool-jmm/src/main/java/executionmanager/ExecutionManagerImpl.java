@@ -2,7 +2,6 @@ package executionmanager;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.concurrent.CountDownLatch;
 
 /**
  * Created by root on 25.06.18.
@@ -11,33 +10,33 @@ public class ExecutionManagerImpl implements ExecutionManager {
 
     public Context execute(Runnable callback, Runnable... tasks) {
         Collection<Thread> threads = new ArrayList<>();
-        CountDownLatch latch = new CountDownLatch(tasks.length);
         for (Runnable task : tasks) {
-            Thread thread = new Thread(new TaskWrapper(task, latch));
+            Thread thread = new Thread(task);
             threads.add(thread);
             thread.start();
         }
-        try {
-            latch.await();
-            callback.run();
-            return new ContextImpl(threads);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        return null;
+        Thread thread = new Thread(new CallbackWrapper(callback, threads));
+        thread.start();
+        return new ContextImpl(threads);
     }
 
-    private final class TaskWrapper implements Runnable {
-        private final Runnable runnable;
-        private final CountDownLatch latch;
-        public TaskWrapper(Runnable runnable, CountDownLatch latch) {
-            this.runnable = runnable;
-            this.latch = latch;
+    private final class CallbackWrapper implements Runnable {
+        private final Collection<Thread> threads;
+        private final Runnable callback;
+        public CallbackWrapper(Runnable callback, Collection<Thread> threads) {
+            this.threads = threads;
+            this.callback = callback;
         }
         @Override
         public void run() {
-            runnable.run();
-            latch.countDown();
+            for (Thread thread : threads) {
+                try {
+                    thread.join();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            callback.run();
         }
     }
 }
