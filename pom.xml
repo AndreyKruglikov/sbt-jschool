@@ -13,6 +13,7 @@
         <module>jschool-streams</module>
         <module>jschool-multithreading</module>
         <module>jschool-classloaders</module>
+        <module>jschool-jmm</module>
     </modules>
 
 

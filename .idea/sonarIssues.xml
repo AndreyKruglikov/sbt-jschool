@@ -8,12 +8,52 @@
             <set />
           </value>
         </entry>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/jschool-classloaders/src/main/java/Runner.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/jschool-classloaders/src/main/java/impl/CalculatorImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jschool-jmm/src/main/java/JMMException.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jschool-jmm/src/main/java/Runner.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jschool-jmm/src/main/java/SimpleException.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jschool-jmm/src/main/java/Task.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jschool-jmm/src/main/java/task/SimpleCallable.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jschool-jmm/src/main/java/task/SimpleException.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jschool-jmm/src/main/java/task/Task.java">
           <value>
             <set />
           </value>
