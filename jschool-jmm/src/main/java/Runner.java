@@ -1,6 +1,6 @@
 import executionmanager.*;
-
-import java.util.concurrent.TimeUnit;
+import task.SimpleException;
+import task.Task;
 
 /**
  * Created by root on 25.06.18.
@@ -8,6 +8,23 @@ import java.util.concurrent.TimeUnit;
 public class Runner {
 
     public static void main(String... args) {
+        // Task 1
+//        final Task<String> stringTask = new Task<>(new task.SimpleCallable("simple name"));
+//        for(int i=0; i< 10; i++) {
+//            Thread thread = new Thread(new Runnable() {
+//                @Override
+//                public void run() {
+//                    try {
+//                        System.out.println(stringTask.get());
+//                    } catch (SimpleException e) {
+//                        System.out.println(e + " in " + Thread.currentThread().getName());
+//                    }
+//                }
+//            });
+//            thread.start();
+//        }
+
+        // Task 2
         Runnable[] runnables = new Runnable[10];
         for (int i = 0; i < runnables.length; i++) {
             runnables[i] = new SimpleTask(String.valueOf(i));

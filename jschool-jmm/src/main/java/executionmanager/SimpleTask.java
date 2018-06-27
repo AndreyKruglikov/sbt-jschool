@@ -14,20 +14,28 @@ public class SimpleTask implements Runnable {
     }
     @Override
     public void run() {
-        try {
-            TimeUnit.MILLISECONDS.sleep(2);
-        } catch (InterruptedException e) {
-            System.out.println(this + " interrupted");
-            return;
+//        try {
+//            TimeUnit.MILLISECONDS.sleep(2);
+//        } catch (InterruptedException e) {
+//            System.out.println(this + " interrupted");
+//            return;
+//        }
+        if (!Thread.interrupted()) {
+            if (random.nextInt() < 0)
+                try {
+                    throw new Exception();
+                } catch (Exception exc) {
+                    System.out.println(this + " terminated with exception");
+                    Thread.currentThread().setUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
+                        @Override
+                        public void uncaughtException(Thread t, Throwable e) {
+                            System.out.println(e);
+                        }
+                    });
+                    return;
+                }
+            System.out.println(this + " completed");
         }
-        if (random.nextInt() < 0)
-            try {
-                throw new Exception();
-            } catch (Exception e) {
-                System.out.println(this + " terminated with exception");
-                return;
-            }
-        System.out.println(this + " completed");
     }
     @Override
     public String toString() {

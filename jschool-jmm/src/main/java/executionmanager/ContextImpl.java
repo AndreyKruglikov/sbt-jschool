@@ -16,30 +16,36 @@ public class ContextImpl implements Context {
     @Override
     public int getCompletedTaskCount() {
         int completed = 0;
-        for (Thread thread : threads) {
-            if (!thread.isAlive() && !thread.isInterrupted())
-                ++completed;
+        synchronized (threads) {
+            for (Thread thread : threads) {
+                if (!thread.isInterrupted() && thread.getUncaughtExceptionHandler() == null)
+                    ++completed;
+            }
         }
         return completed;
     }
 
     @Override
     public int getFailedTaskCount() {
+        // TODO
         return threads.size() - (getCompletedTaskCount() + getInterruptedTaskCount());
     }
 
     @Override
     public int getInterruptedTaskCount() {
         int interrupted = 0;
-        for (Thread thread : threads) {
-            if (thread.isInterrupted())
-                ++interrupted;
+        synchronized (threads) {
+            for (Thread thread : threads) {
+                if (thread.isInterrupted())
+                    ++interrupted;
+            }
         }
         return interrupted;
     }
 
     @Override
     public void interrupt() {
+        // TODO
         for (Thread thread : threads) {
             thread.interrupt();
         }
@@ -47,6 +53,7 @@ public class ContextImpl implements Context {
 
     @Override
     public boolean isFinished() {
+        // TODO
         if (getCompletedTaskCount() + getInterruptedTaskCount() == threads.size())
             return true;
         return false;
