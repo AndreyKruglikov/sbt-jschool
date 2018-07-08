@@ -43,6 +43,21 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/jschool-jmm/src/main/java/executionmanager/ContextImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jschool-jmm/src/main/java/executionmanager/ExecutionManagerImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jschool-jmm/src/main/java/executionmanager/SimpleTask.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/jschool-jmm/src/main/java/task/SimpleCallable.java">
           <value>
             <set />
@@ -134,8 +149,8 @@
               </SonarIssue>
               <SonarIssue>
                 <option name="isNew" value="false" />
-                <option name="key" value="AWP1V2J9V0Wj3VTF5m3B" />
-                <option name="line" value="42" />
+                <option name="key" value="AWP1V2J9V0Wj3VTF5m3A" />
+                <option name="line" value="9" />
                 <option name="message" value="Reorder the modifiers to comply with the Java Language Specification." />
                 <option name="ruleKey" value="squid:ModifiersOrderCheck" />
                 <option name="severity" value="MINOR" />
@@ -150,13 +165,33 @@
               </SonarIssue>
               <SonarIssue>
                 <option name="isNew" value="false" />
-                <option name="key" value="AWP1V2J9V0Wj3VTF5m3A" />
-                <option name="line" value="9" />
+                <option name="key" value="AWP1V2J9V0Wj3VTF5m3B" />
+                <option name="line" value="42" />
                 <option name="message" value="Reorder the modifiers to comply with the Java Language Specification." />
                 <option name="ruleKey" value="squid:ModifiersOrderCheck" />
                 <option name="severity" value="MINOR" />
               </SonarIssue>
             </set>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jschool-sockets/src/main/java/schoolchat/ChatServer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jschool-sockets/src/main/java/schoolchat/client/ChatClient.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jschool-sockets/src/main/java/schoolchat/server/ChatServer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jschool-sockets/src/main/java/schoolchat/server/ChatServerThread.java">
+          <value>
+            <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/jschool-streams/src/main/java/Person.java">

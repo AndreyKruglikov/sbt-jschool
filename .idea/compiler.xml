@@ -9,6 +9,7 @@
         <module name="jschool-jmm" />
         <module name="jschool-multithreading" />
         <module name="jschool-serialization" />
+        <module name="jschool-sockets" />
         <module name="jschool-streams" />
       </profile>
     </annotationProcessing>
