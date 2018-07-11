@@ -12,9 +12,9 @@
         <module>jschool-serialization</module>
         <module>jschool-streams</module>
         <module>jschool-multithreading</module>
-        <module>jschool-classloaders</module>
         <module>jschool-jmm</module>
         <module>jschool-sockets</module>
+        <module>jschool-goodcode</module>
     </modules>
 
 

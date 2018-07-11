@@ -23,6 +23,31 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/jschool-goodcode/src/main/java/SalaryHtmlReportNotifier.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jschool-goodcode/src/main/java/refactoring/test1/SalaryHtmlReportNotifier.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jschool-goodcode/src/main/java/refactoring/test2/Orientation.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jschool-goodcode/src/main/java/refactoring/test2/Tractor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/jschool-goodcode/src/main/java/refactoring/test2/TractorInDitchException.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/jschool-jmm/src/main/java/JMMException.java">
           <value>
             <set />
@@ -149,8 +174,8 @@
               </SonarIssue>
               <SonarIssue>
                 <option name="isNew" value="false" />
-                <option name="key" value="AWP1V2J9V0Wj3VTF5m3A" />
-                <option name="line" value="9" />
+                <option name="key" value="AWP1V2J9V0Wj3VTF5m3B" />
+                <option name="line" value="42" />
                 <option name="message" value="Reorder the modifiers to comply with the Java Language Specification." />
                 <option name="ruleKey" value="squid:ModifiersOrderCheck" />
                 <option name="severity" value="MINOR" />
@@ -165,8 +190,8 @@
               </SonarIssue>
               <SonarIssue>
                 <option name="isNew" value="false" />
-                <option name="key" value="AWP1V2J9V0Wj3VTF5m3B" />
-                <option name="line" value="42" />
+                <option name="key" value="AWP1V2J9V0Wj3VTF5m3A" />
+                <option name="line" value="9" />
                 <option name="message" value="Reorder the modifiers to comply with the Java Language Specification." />
                 <option name="ruleKey" value="squid:ModifiersOrderCheck" />
                 <option name="severity" value="MINOR" />
@@ -205,6 +230,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/jschool-streams/src/main/java/Streams.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pom.xml">
           <value>
             <set />
           </value>
