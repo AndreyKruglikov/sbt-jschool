@@ -1,0 +1,44 @@
+LANGUAGE plpgsql
+
+1) Create users table.
+CREATE TABLE users (
+    id          serial PRIMARY KEY,
+    name        varchar(40) NOT NULL,
+    age         integer NOT NULL
+);
+
+2) Insert some data into users.
+INSERT INTO users (name, age) VALUES ('Victor', 35), ('Victoria', 30), ('Ignat', 25);
+
+3) Create items table.
+CREATE TABLE items (
+    id          serial PRIMARY KEY,
+    name        varchar(40) NOT NULL,
+    price       real NOT NULL
+);
+
+4) Insert some data into items.
+INSERT INTO items (name, price) VALUES ('Essentuki 4', 47.0), ('Essentuki 7', 47.0), ('Essentuki 12', 47.0);
+
+5) Create orders table.
+CREATE TABLE orders (
+    id          serial PRIMARY KEY,
+    date        timestamp DEFAULT now(),
+    user_id     integer REFERENCES users (id),
+    item_id     integer REFERENCES items (id)
+);
+
+6) Insert some data into orders.
+INSERT INTO orders (user_id, item_id, date) VALUES ((SELECT id from users WHERE name = 'Victor'),   (SELECT id from items WHERE name = 'Essentuki 12' ), '2018-07-05'::timestamp),
+                                                   ((SELECT id from users WHERE name = 'Victor'),   (SELECT id from items WHERE name = 'Essentuki 4' ),  '2018-07-05'::timestamp),
+                                                   ((SELECT id from users WHERE name = 'Victoria'), (SELECT id from items WHERE name = 'Essentuki 7' ),  '2018-07-06'::timestamp);
+
+7) Create view on users purchases.
+CREATE VIEW orders_view AS SELECT inner_table.name AS user_name, items.name AS item_name, inner_table.date AS date
+                                FROM (SELECT * FROM users INNER JOIN orders ON users.id = orders.user_id) AS inner_table
+                                    INNER JOIN items ON items.id = inner_table.item_id;
+
+8) Request for users purchases specified on the date.
+SELECT * FROM orders_view WHERE user_name = 'Victor' AND date >= '2018-07-24'::date AND date < '2018-07-25'::date;
+
+

@@ -15,6 +15,7 @@
         <module>jschool-jmm</module>
         <module>jschool-sockets</module>
         <module>jschool-goodcode</module>
+        <module>jschool-jdbc</module>
     </modules>
 
 

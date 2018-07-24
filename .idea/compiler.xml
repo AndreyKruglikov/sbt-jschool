@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jschool-goodcode" />
+        <module name="jschool-jdbc" />
         <module name="jschool-jmm" />
         <module name="jschool-multithreading" />
         <module name="jschool-serialization" />
