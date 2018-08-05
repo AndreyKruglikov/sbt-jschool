@@ -16,6 +16,7 @@
         <module>jschool-sockets</module>
         <module>jschool-goodcode</module>
         <module>jschool-jdbc</module>
+        <module>jschool-springJDBC</module>
     </modules>
 
 

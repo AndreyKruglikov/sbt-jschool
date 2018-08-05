@@ -12,6 +12,7 @@
         <module name="jschool-multithreading" />
         <module name="jschool-serialization" />
         <module name="jschool-sockets" />
+        <module name="jschool-springJDBC" />
         <module name="jschool-streams" />
       </profile>
     </annotationProcessing>
